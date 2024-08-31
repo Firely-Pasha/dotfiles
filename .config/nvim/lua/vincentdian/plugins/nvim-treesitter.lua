@@ -16,6 +16,7 @@ return {
 				"html",
 				"javascript",
 				"typescript",
+        "rust",
 			},
 			sync_install = false,
 			highlight = { enable = true },

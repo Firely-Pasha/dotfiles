@@ -1,29 +1,15 @@
 return {
-	"williamboman/mason.nvim",
-	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
-		"nvimdev/lspsaga.nvim",
-	},
-	config = function()
-		local mason_status, mason = pcall(require, "mason")
-		if not mason_status then
-			return
-		end
-
-		-- import mason-lspconfig plugin safely
-		local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
-		if not mason_lspconfig_status then
-			return
-		end
-
-		-- import mason-null-ls plugin safely
-		-- local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
-		-- if not mason_null_ls_status then
-		-- return
-		-- end
+  "williamboman/mason.nvim",
+  dependencies = {
+    "williamboman/mason-lspconfig.nvim",
+  },
+  init = function() 
+		local mason = require("mason")
+		local mason_lspconfig = require("mason-lspconfig")
 
 		mason.setup()
 
+    
 		mason_lspconfig.setup({
 			ensure_installed = {
 				"lua_ls",
@@ -31,7 +17,9 @@ return {
 				"tsserver",
 				"svelte",
 				"tailwindcss",
+				"clangd",
+				"rust_analyzer",
 			},
 		})
-	end,
+  end,
 }

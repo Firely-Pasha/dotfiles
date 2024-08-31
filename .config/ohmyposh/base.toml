@@ -1,0 +1,41 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+final_space = true
+version = 2
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+
+  [[blocks.segments]]
+  type = "path"
+  style = "powerline"
+  powerline_symbol = ""
+  foreground = "black"
+  background = "blue"
+
+    [blocks.segments.properties]
+    style = "folder"
+
+[[blocks]]
+type = "prompt"
+newline = true
+alignment = "left"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  template = "\uf105"
+  foreground = "green"
+
+[[blocks]]
+type = "rprompt"
+
+  [[blocks.segments]]
+  type = "time"
+  foreground = "green"
+  template = " {{ .CurrentDate | date .Format }} "
+  style = "plain"
+  
+    [blocks.segments.properties]
+    time_format = "15:04:05"
+
