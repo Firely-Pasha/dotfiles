@@ -109,7 +109,7 @@ return {
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
-		lsp_config.tsserver.setup({
+		lsp_config.ts_ls.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
