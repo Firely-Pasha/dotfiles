@@ -82,7 +82,7 @@ return {
 			keymap.set("n", "<leader>wa", lsp.add_workspace_folder, opts) -- show documentation for what is under cursor
 			-- keymap.set("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", opts) -- see outline on right hand side
 			-- typescript specific keymaps (e.g. rename file and update imports)
-			if client.name == "tsserver" then
+			if client.name == "ts_ls" then
 				keymap.set("n", "<leader>sr", ":TypescriptRenameFile<CR>", opts) -- rename file and update imports
 				keymap.set("n", "<leader>si", ":TypescriptOrganizeImports<CR>", opts) -- organize imports (not in youtube nvim video)
 				keymap.set("n", "<leader>su", ":TypescriptRemoveUnused<CR>", opts) -- remove unused variables (not in youtube nvim video)
