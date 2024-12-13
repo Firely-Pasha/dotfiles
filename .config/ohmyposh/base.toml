@@ -49,20 +49,9 @@ alignment = "left"
     [blocks.segments.properties]
     always_enabled = false
 
-
 [[blocks]]
 type = "prompt"
-newline = true
-alignment = "left"
-
-  [[blocks.segments]]
-  type = "text"
-  style = "plain"
-  template = "\uf105"
-  foreground = "green"
-
-[[blocks]]
-type = "rprompt"
+alignment = "right"
 
   [[blocks.segments]]
   style = "plain"
@@ -97,4 +86,16 @@ type = "rprompt"
 
     [blocks.segments.properties]
     time_format = "15:04:05"
+
+
+[[blocks]]
+type = "prompt"
+newline = true
+alignment = "left"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  template = "\uf105"
+  foreground = "green"
 
