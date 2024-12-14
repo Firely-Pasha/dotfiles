@@ -6,7 +6,7 @@ return {
 	},
 	config = function()
 		local telescope = require("telescope")
-		local telescope_actions = require("telescope.actions")
+		local actions = require("telescope.actions")
 		local fb = telescope.extensions.file_browser
 		local fb_actions = fb.actions
 		telescope.setup({
@@ -26,10 +26,10 @@ return {
 							["r"] = fb_actions.rename,
 							["m"] = fb_actions.move,
 							["y"] = fb_actions.copy,
-							["o"] = telescope_actions.select_default,
+							["o"] = actions.select_default,
 							["O"] = fb_actions.open,
-							["j"] = telescope_actions.move_selection_next,
-							["k"] = telescope_actions.move_selection_previous,
+							["j"] = actions.move_selection_next,
+							["k"] = actions.move_selection_previous,
 						},
 					},
 				},
