@@ -19,17 +19,27 @@ sapphire = "#7DC4E4"
 [[blocks]]
 type = "prompt"
 alignment = "left"
+
+  [[blocks.segments]]
+  style = "plain"
+  template = "asdasd"
+  foreground = "p:os"
+  type = "root"
   
   [[blocks.segments]]
-  template = " {{.Icon}} "
+  style = "plain"
+  template = "{{.Icon}} "
   foreground = "p:os"
   type = "os"
 
   [[blocks.segments]]
+  style = "plain"
   foreground = "p:muave"
   template = "{{ .UserName }}@{{ .HostName }} "
   type = "session"
+
   [[blocks.segments]]
+  style = "plain"
   type = "path"
   template = " {{ .Path }} "
   foreground = "p:blue"
@@ -96,6 +106,6 @@ alignment = "left"
   [[blocks.segments]]
   type = "text"
   style = "plain"
-  template = "\uf105"
+  template = "\u276f"
   foreground = "green"
 
